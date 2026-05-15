@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+     <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      height:100vh;
+      background:#f2f2f2;
+    }
+
+    .container{
+      width:900px;
+      display:grid;
+
+      /* 4 columns */
+      grid-template-columns: repeat(4, 1fr);
+
+      /* row height */
+      grid-auto-rows:120px;
+
+      gap:15px;
+      padding:20px;
+      background:dodgerblue;
+    }
+
+    .box{
+      border:3px solid black;
+      border-radius:8px;
+    }
+
+    /* Top row */
+    .box1{
+      grid-column:1 / 2;
+    }
+
+    .box2{
+      grid-column:2 / 3;
+    }
+
+    .box3{
+      grid-column:3 / 5;
+    }
+
+    /* Middle + bottom */
+    .box4{
+      grid-column:1 / 2;
+    }
+
+    .box5{
+      grid-column:2 / 3;
+      grid-row:2 / 4; /* big center box */
+    }
+
+    .box6{
+      grid-column:3 / 4;
+    }
+
+    .box7{
+      grid-column:4 / 5;
+    }
+
+    .box8{
+      grid-column:1 / 2;
+    }
+
+    .box9{
+      grid-column:3 / 5;
+    }
+
+  </style>
+</head>
+<body>
+    
+  <div class="container">
+
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+
+    <div class="box box4"></div>
+    <div class="box box5"></div>
+    <div class="box box6"></div>
+    <div class="box box7"></div>
+
+    <div class="box box8"></div>
+    <div class="box box9"></div>
+
+  </div>
+    
+</body>
+</html>
